@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script3.js"></script>
 </head>
 <body>
     <header>
@@ -20,117 +23,118 @@
         </ul>
     </header>
     <main>
-        <div class="search">
-            <input type="search" placeholder="Nhập từ khóa để tìm...." />
-        </div>
-        <section class="products flex">
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>iPhone 15 Pro Max</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>Galaxy S8</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>Galaxy S23 Ultra</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>Galaxy Z-Fold 6</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>iPhone 13 Pro Max</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>iPhone 13 Pro Max</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>iPhone 13 Pro Max</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>iPhone 13 Pro Max</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>iPhone 13 Pro Max</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
-            <div class="product">
-                <div>
-                    <img src="images/phone.png" alt="product" />
-                    <h2>iPhone 13 Pro Max</h2>
-                    <div class="price">29.000.000<sup>đ</sup></div>
-                </div>
-            </div>
+        <section class="slider">
+            <img src="images/banner1.png" alt="test" />
+            <img src="images/banner2.png" alt="test" />
+            <img src="images/banner3.png" alt="test" />
         </section>
-        <section class="details flex">
-            <div class="left">
-                <img id="main" src="images/galaxys8/Gold_1.jpg" alt="S8" />
-                <div class="thumb flex">
-                    <div><img src="images/galaxys8/Gold_1.jpg" alt=""/></div>
-                    <div><img src="images/galaxys8/Gold_2.jpg" alt=""/></div>
-                    <div><img src="images/galaxys8/Gold_3.jpg" alt=""/></div>
-                    <div><img src="images/galaxys8/Gold_4.jpg" alt=""/></div>
-                    <div><img src="images/galaxys8/Gold_5.jpg" alt=""/></div>
-                </div>
-            </div>
-            <div class="right">
-                <h2 class="red">17.990.000<sup>đ</sup></h2>
-                <div class="button">
-                    <button rel="Blue_" style="background-color: blue;"></button>
-                    <button rel="Gold_" style="background-color: gold;"></button>
-                    <button rel="Silver_" style="background-color: silver;"></button>
-                    <button rel="Black_" style="background-color: black;"></button>
-                </div>
-                <div class="info">
-                    <h4>Khuyến mãi</h4>
-                    <ul>
-                        <li>PROMOTION 0001</li>
-                        <li>PROMOTION 0002</li>
-                        <li>PROMOTION 0003</li>
-                    </ul>
-                </div>
-                <div class="info promo">
-                    <h4>Qùa tặng</h4>
-                    <ul>
-                        <li>PROMOTION 0001</li>
-                        <li>PROMOTION 0002</li>
-                    </ul>
-                </div>
-            </div>
+        <section>
+            <ul class="tab flex">
+                <li class="active"><a href="#mobile"><i class="fa-solid fa-mobile"></i> Điện thoại</a></li>
+                <li><a href="#tablet"><i class="fa-solid fa-tablet"></i> Máy tính bảng</a></li>
+            </ul>
+
+            <section class="tab-content active">
+                <section id="mobile">
+                    <div class="search">
+                        <input class="input" type="search" placeholder="Nhập từ khóa để tìm...." />
+                    </div>
+                    <div >
+                        <button class="btn" id="addProduct">&plus;</button>
+                        <div class="form" id="addProductForm">
+                            <input type="text" id="name" placeholder="Tên sản phẩm" class="input" />
+                            <input type="number" id="price" placeholder="Giá sản phẩm" class="input" />
+                            <input type="text" id="image" value="images/phone.png" placeholder="Ảnh sản phẩm" class="input" />
+                            <input type="button" class="btn" value="Thêm" id="addProcess" />
+                        </div>
+                    </div>
+                    <section class="products flex">
+                        
+                        <div class="product">
+                            <div>
+                                <img src="images/phone.png" alt="product" />
+                                <h2>iPhone 15 Pro Max</h2>
+                                <div class="price">29.000.000<sup>đ</sup></div>
+                                <a href="#" class="delete">&times;</a>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="images/phone.png" alt="product" />
+                                <h2>Galaxy S8</h2>
+                                <div class="price">29.000.000<sup>đ</sup></div>
+                                <a href="#" class="delete">&times;</a>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="images/phone.png" alt="product" />
+                                <h2>Galaxy S23 Ultra</h2>
+                                <div class="price">29.000.000<sup>đ</sup></div>
+                                <a href="#" class="delete">&times;</a>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="images/phone.png" alt="product" />
+                                <h2>Galaxy Z-Fold 6</h2>
+                                <div class="price">29.000.000<sup>đ</sup></div>
+                                <a href="#" class="delete">&times;</a>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="images/phone.png" alt="product" />
+                                <h2>iPhone 13 Pro Max</h2>
+                                <div class="price">29.000.000<sup>đ</sup></div>
+                                <a href="#" class="delete">&times;</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="details flex">
+                        <div class="left">
+                            <img id="main" src="images/galaxys8/Blue_1.jpg" alt="S8" />
+                            <div class="thumb flex">
+                                <div><img src="images/galaxys8/Blue_1.jpg" alt=""/></div>
+                                <div><img src="images/galaxys8/Blue_2.jpg" alt=""/></div>
+                                <div><img src="images/galaxys8/Blue_3.jpg" alt=""/></div>
+                                <div><img src="images/galaxys8/Blue_4.jpg" alt=""/></div>
+                                <div><img src="images/galaxys8/Blue_5.jpg" alt=""/></div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h2 class="red">17.990.000<sup>đ</sup></h2>
+                            <div class="button">
+                                <button rel="Blue_" style="background-color: blue;"></button>
+                                <button rel="Gold_" style="background-color: gold;"></button>
+                                <button rel="Silver_" style="background-color: silver;"></button>
+                                <button rel="Black_" style="background-color: black;"></button>
+                            </div>
+                            <div class="info">
+                                <h4>Khuyến mãi</h4>
+                                <ul>
+                                    <li>PROMOTION 0001</li>
+                                    <li>PROMOTION 0002</li>
+                                    <li>PROMOTION 0003</li>
+                                </ul>
+                            </div>
+                            <div class="info promo">
+                                <h4>Qùa tặng</h4>
+                                <ul>
+                                    <li>PROMOTION 0001</li>
+                                    <li>PROMOTION 0002</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section id="tablet">
+                    <h1>TABLET</h1>
+                </section>
+            </section>
         </section>
+
+        
     </main>
     <footer>
         Khoa CNTT &copy; 2024
