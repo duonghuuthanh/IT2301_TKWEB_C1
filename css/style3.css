@@ -1,0 +1,146 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    background: linear-gradient(lightblue, blue);
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu > li:last-child {
+    margin-left: auto;
+}
+
+ul.menu > li > a {
+    display: block;
+    padding: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+ul.menu > li > a:hover {
+    background-color: darkblue;
+}
+
+.product {
+    width: 20%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.product > div {
+    background: linear-gradient(lightblue, blue);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 5px;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product .price {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(212, 209, 6, 0.6);
+    color: darkblue;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 10px 0;
+}
+
+.details {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.details > div {
+    flex: 1;
+}
+
+.thumb > div {
+    flex: 1;
+}
+
+.left img {
+    width: 100%;
+}
+
+.red {
+    color: red;
+}
+
+.info {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.info.gift {
+    border-color: red;
+}
+
+.buttons > button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+}
+
+footer {
+    background: linear-gradient(lightblue, blue);
+    padding: 2.5rem;
+    color: white;
+}
+
+.input-form {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid blue;
+}
+
+.popup {
+    background-color: rgba(15, 15, 15, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    text-align: center;
+    display: none;
+}
+
+.popup img {
+    height: 100vh;
+}
+
+a.close {
+    font-size: 3rem;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.show {
+    display: block !important;
+}
+
+img {
+    cursor: pointer;
+}
